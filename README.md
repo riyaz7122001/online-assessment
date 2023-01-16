@@ -1,4 +1,4 @@
-# online-assessmen
+# online-assessment
 
 Open your Terminal/Command Prompt on the project’s root folder.
 
