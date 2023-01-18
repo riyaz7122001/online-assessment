@@ -22,3 +22,5 @@ Username: admin. You will then be prompted for your desired email address:
 Email address: admin@example.com. ...
 
 Password: ********** Password (again): ********* Superuser created successfully.
+
+hello
