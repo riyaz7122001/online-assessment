@@ -2,11 +2,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="utf-8" />
     <title></title>
   </head>
   <style>
     .body-style {
+      font-family: "Poppins", sans-serif;
       background-color: #121212;
       color: #ffffff;
       font-weight: bolder;
@@ -16,20 +23,21 @@
     span {
       color: #8094ff;
     }
+
+    .text {
+      font-size: 4rem;
+    }
   </style>
   <body class="body-style">
     {% include "exam/navbar.html" %}
     <br /><br /><br /><br /><br />
     <!-- <img src="{% static "image/logout_img.png" %}"  style="width:800px; height:100px; padding-left:400px;"> -->
 
-    <h2 class="text-center">
+    <h2 class="text text-center">
       Logged Out <span>Successfully</span> <br />
-      Thank you for using our system!
+      Thank you for using our platform!
     </h2>
 
-    <br /><br /><br /><br /><br />
-    <br /><br /><br /><br /><br />
-    <br /><br />
     <!-- {% include "exam/footer.html" %} -->
   </body>
 </html>
