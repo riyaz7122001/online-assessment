@@ -6,3 +6,14 @@ And finally, after a successful migration run the application: python manage.py 
 At last, open up your favorite web browser
 Go to URL “http://127.0.0.1/[ PORT_NUMBER ]/“
 For the Admin Panel credentials, you have to create one with a superuser.
+
+for Poppins font : 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    font-family: "Poppins", sans-serif;

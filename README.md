@@ -23,5 +23,3 @@ Email address: admin@example.com. ...
 
 Password: ********** Password (again): ********* Superuser created successfully.
 
-hello 
-
