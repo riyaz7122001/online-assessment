@@ -7,8 +7,11 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <script>document.documentElement.style.setProperty('--nav-height', document.getElementById("bs-example").offsetHeight);</script>
 
     <style media="screen">
+      * { --nav-height: 0px;
+      }
       .display-4,
       .lead {
         font-family: "Poppins", sans-serif;
@@ -48,8 +51,7 @@
       }
 
       .auth-wrapper {
-        height: 100%;
-        width: 100%;
+        height: calc(100% - var(--nav-height));
         display: flex;
         justify-content: center;
         align-items: center;
@@ -61,7 +63,7 @@
         text-align: center;
         padding: 2rem 2rem;
         border-radius: 5px;
-        width: 60rem;
+        width: 40rem;
         height: 25rem;
         display: flex;
         flex-direction: column;
@@ -70,7 +72,18 @@
         box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
           0 4px 6px -4px rgb(0 0 0 / 0.1);
       }
+      @media all and (max-width: 650px) {
+        .auth-div{
+          width:100%;
+          height:100%
+        }
 
+        .auth-wrapper {
+          display:grid;
+          place-items:center;height: calc(100vh - var(--nav-height));
+          margin-top: 0%;
+        }
+      }
       a {
         text-decoration: none;
       }
@@ -88,15 +101,16 @@
 
   <body class="body-style">
     {% include "exam/navbar.html" %}
-    <br /><br />
+    <br />
     <div class="auth-wrapper">
       <div class="auth-div">
         <h1 class="display-4">Hello Student,</h1>
         <p class="lead">and Welcome to Online Assessment System</p>
+        <hr style ="background-color:white;">
         <p class="lead">Select any of them to access into the system</p>
         <p class="lead">
           <a class="btn-first" href="studentsignup" role="button"
-            >Create Your Account</a
+            >Create Account</a
           >
           <a class="btn-first" href="studentlogin" role="button">Login Now</a>
         </p>
