@@ -5,101 +5,110 @@
     <meta charset="utf-8">
     <title></title>
     <style media="screen">
-      body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background: #304352;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #d7d2cc, #304352);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+      * {
+    font-family: "Poppins",sans-serif;
 }
 
-.box {
-    width: 500px;
-    padding: 40px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background: #212529;
-    border-radius: 15px;
-    text-align: center;
-    transition: 0.25s;
-    margin-top: 100px
+.body-style{
+    background-color: black;
 }
 
-.box input[type="text"],
-.box input[type="password"] {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #838383;
-    padding: 10px 10px;
-    width: 250px;
-    outline: none;
-    color: white;
-    border-radius: 5px;
-    transition: 0.25s
-}
-
-.box h1 {
-    color: white;
-    font-weight: 500
-}
-
-.box input[type="text"]:focus,
-.box input[type="password"]:focus {
-    width: 300px;
-    border-color: #4caf50;
-}
-
-.box input[type="submit"] {
-    border: 0;
-    background: #4caf50;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
+ .btn-first {
+      text-align: center;
+      padding: 0.35rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    border-radius: 0.3rem;
+    background-color: rgb(87, 111, 232);
+    transition-property: color, rgb(87, 111, 232);
+    transition-duration: 250ms, 250ms;
+    transition-timing-function: ease, cubic-bezier(0.645, 0.045, 0.355, 1);
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    }
+    .btn-first:hover{
+      border-color: rgb(255, 255, 255);
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    }
     
-    padding: 14px 40px;
-    outline: none;
-    color: white;
+.auth-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8%;
+
+}
+
+.auth-div {
+  background-color: rgb(27, 27, 27);
+  text-align: center;
+  padding: 3rem 5rem;
+  border-radius: 10px;
+  width: 40rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+.auth-div > h1 {
+  margin: 0 0 50px 0;
+  font-size: 3rem;
+}
+input[type="text"],input[type="password"] {
+    margin-top:4px;
+    border-style: solid;
+    border-width: 3px;
+    border-color:rgb(87, 111, 232);
     border-radius: 5px;
-    transition: 0.25s;
-    cursor: pointer
+   
+    
+}
+input[type="text"]:focus,input[type="password"]:focus{
+  transition-property: 0 8px 50px 0 rgba(0,0,0,0.5), border;
+  transition-duration: 300ms, 300ms;
+  transition-timing-function: ease, ease;
 }
 
-.box input[type="submit"]:hover {
-    background: #347736;
+input[type="text"]:hover,input[type="password"]:hover{
+    width: 
+}
+input[type="submit"] {
+  width: 100%;
+  padding: 8px 12px;
+  margin: 1rem 0;
 }
 
+form{
+    width: 20rem;
+}
 
     </style>
   </head>
-  <body>
+  <body class="body-style">
     {% include "exam/navbar.html" %}
-    <div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card">
+    <div class="auth-wrapper">
+    <div class="auth-div">
+
+                <h1 style="font-family: Poppins,sans-serif; color: white;">Admin <span style="color:rgb(87, 111, 232) ; margin-top: 2rem;" >Login</span> Form</h1>
                 <form class="box" method="post">
                     {% csrf_token %}
-                    <h1>Admin Login Panel</h1>
-
+                    <label for="password" class="form-label" style="color: white; text-align: left; width: 20rem; margin-bottom: 0;">Username</label>
                      {% render_field form.username class="form-control" autocomplete="off" placeholder="Username" %}
+                    <label for="password" class="form-label" style="color: white; text-align: left; width: 20rem; margin-bottom: 0;">Password</label>
                      {% render_field form.password class="form-control" autocomplete="off" placeholder="Password" %}
-
-                     <input type="submit" name="" value="Admin Login">
+                     <input class="btn-first" type="submit" name="" value="Login">
 
                 </form>
-            </div>
-        </div>
     </div>
 </div>
-<br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br>
-{% include "exam/footer.html" %}
+<!-- {% include "exam/footer.html" %} -->
   </body>
 </html>

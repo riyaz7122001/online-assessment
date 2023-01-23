@@ -2,6 +2,12 @@
 {% load static %}
 <html lang="en" dir="ltr">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -11,11 +17,12 @@
 
     <style media="screen">
       * { --nav-height: 0px;
+        font-family: "Poppins",sans-serif;
       }
-      .display-4,
+      /* .display-4,
       .lead {
         font-family: "Poppins", sans-serif;
-      }
+      } */
 
       .lead {
         margin-left: 2rem;
@@ -105,8 +112,8 @@
     <div class="auth-wrapper">
       <div class="auth-div">
         <h1 class="display-4">Hello Student,</h1>
+        <hr style ="background-color:#00BFA8; width:90%;text-align:center;">
         <p class="lead">and Welcome to Online Assessment System</p>
-        <hr style ="background-color:white;">
         <p class="lead">Select any of them to access into the system</p>
         <p class="lead">
           <a class="btn-first" href="studentsignup" role="button"
