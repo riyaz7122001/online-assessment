@@ -3,6 +3,10 @@
 <html lang="en" dir="ltr">
 
 <head>
+        <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -93,6 +97,9 @@
       button {
         margin: 1rem;
       }
+          .animate__animated.animate__bounce {
+  --animate-duration: 2.2s;
+}
       
   </style>
 
@@ -102,7 +109,7 @@
 
   {% include "exam/navbar.html" %}
   <br>
-  <div class="auth-wrapper">
+  <div class="auth-wrapper  animate__animated animate__bounce">
     <div class="auth-div">
     <h1 class="display-4" style ="color:white;">Hello Teacher,</h1>
     <hr style ="background-color:#00BFA8; width:90%;text-align:center;">

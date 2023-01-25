@@ -1,36 +1,139 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en" dir="ltr">
-  <style>
-    .jumbotron {
-      margin-bottom: 0px;
-    }
+  <head>  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * { --nav-height: 0px;
+        font-family: "Poppins",sans-serif;
+      }
+      /* .display-4,
+      .lead {
+        font-family: "Poppins", sans-serif;
+      } */
+
+      .lead {
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
+      .body-style {
+        font-family: "Poppins", sans-serif;
+        background-color: black;
+        color: #ffffff;
+        font-weight: bolder;
+        font-family: "Poppins";
+      }
+      .btn-first {
+        width: 10%;
+        text-align: center;
+        padding: 0.35rem;
+        border-style: solid;
+        border-width: 1px;
+        border-color: transparent;
+        border-radius: 0.3rem;
+        background-color: rgb(87, 111, 232);
+        transition-property: color, rgb(87, 111, 232);
+        transition-duration: 250ms, 250ms;
+        transition-timing-function: ease, cubic-bezier(0.645, 0.045, 0.355, 1);
+        color: rgb(0, 0, 0);
+        font-size: 1rem;
+      }
+      .btn-first:hover {
+        border-color: rgb(255, 255, 255);
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+      }
+
+      .auth-wrapper {
+        height: calc(100% - var(--nav-height));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 8%;
+      }
+
+      .auth-div {
+        background-color: rgb(27, 27, 27);
+        text-align: center;
+        padding: 2rem 2rem;
+        border-radius: 5px;
+        width: 60rem;
+        height: 30rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+          0 4px 6px -4px rgb(0 0 0 / 0.1);
+      }
+      @media all and (max-width: 650px) {
+        .auth-div{
+          width:100%;
+          height:100%
+        }
+
+        .auth-wrapper {
+          display:grid;
+          place-items:center;height: calc(100vh - var(--nav-height));
+          margin-top: 0%;
+        }
+      }
+      a {
+        text-decoration: none;
+      }
+      button {
+        margin: 1rem;
+      }
+      a:hover{
+        border-color: rgb(255, 255, 255);
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+      }
+.animate__animated.animate__bounce {
+  --animate-duration: 2.2s;
+}
   </style>
-  <body>
+  </head>
+
+  <body class="body-style ">
     {% include "exam/navbar.html" %}
     <br />
     <section
-      id="section-jumbotron"
-      class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center"
+      class="auth-wrapper animate__animated animate__bounce"
+
     >
-      <div class="container text-center">
-        <h2 class="display-3 text-info">Online Assessment System</h2>
-        <p class="display-4 d-none d-sm-block">
+    <div class="auth-div">
+        <h2 class="display-4">Online <span style="color:rgb(87, 111, 232) ; margin-top: 2rem;" >Assessment</span> System</h2>
+        <p class="display-4" style="font-size: 2.8rem;">
           Attend your examinations online!
         </p>
         <p class="lead">Sign Up now to start your first online examination</p>
 
         <p><strong> Start Your Journey Here:</strong></p>
-        <a
-          href="/student/studentsignup"
-          class="btn btn-lg btn-info"
-          style="padding-right: 35px; border-radius: 0%"
-          ><i class="fa fa-graduation-cap" aria-hidden="true"></i> Sign Up as
-          Student</a
-        >
+        
+        <!-- <button class="btn-first"><a href="/student/studentsignup">Signup</a></button> -->
+        <a class="btn-first" href="/student/studentsignup" style="text-align:center;align-items:center;height:9%;width:15rem; border-radius: 1.8rem; margin-top: 1rem"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;&nbsp;Signup as Student</a>
+        <!-- <a
+          href="/student/studentsignup"   
+        
+          class="btn btn-first btn-lg btn-info"
+          style="padding-right: 35px; border-radius: 1.8rem; margin-top: 1rem; background-color: rgb(87, 111, 232);"
+          ><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Signup</a
+        > -->
 
         <br /><br /><br />
       </div>
-    </section>
+    </section>    
   </body>
 </html>

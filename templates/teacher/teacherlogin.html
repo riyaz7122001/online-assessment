@@ -2,6 +2,10 @@
 {% load widget_tweaks %}
 <html lang="en" dir="ltr">
   <head>
+       <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <meta charset="utf-8">
     <title></title>
     <style media="screen">
@@ -94,7 +98,7 @@ form{
   <body class="body-style">
     {% include "exam/navbar.html" %}
     <div class="auth-wrapper">
-        <div class="auth-div">    
+        <div class="auth-div animate__animated animate__fadeInDown animate__delay-1s">    
         <h1 style="font-family: Poppins,sans-serif; color: white;">Teacher <span style="color:rgb(87, 111, 232) ; margin-top: 2rem;"> Login </span>Form</h1>
            
                 <form class="box" method="post" >
