@@ -66,27 +66,35 @@
       left: 0px;
       right: 0px;
     }
+
+    .body-style{
+    background-color: black;
+}
+
+.col-md-4{
+  border-radius: 10px;
+}
     </style>
   </head>
 <br><br>
-
-  <div class="container">
+<body class="body-style">
+    <div class="container">
     <div class="row">
       
   
-      <div class="col-md-4 col-xl-6">
+      <div class="col-md-4 col-xl-6 mt-5 rounded">
         <div class="card bg-c-blue order-card">
           <div class="card-block">
-            <h6 class="m-b-20">Available Exams</h6>
+            <h6 class="m-b-20 mb-5">Available Exams</h6>
            <h2 class="text-right"><i class="fas fa-book f-left"></i><span>{{total_course}}</span></h2>
           </div>
         </div>
       </div>
   
-      <div class="col-md-4 col-xl-6">
+      <div class="col-md-4 col-xl-6 mt-5">
         <div class="card bg-c-yellow order-card">
           <div class="card-block">
-            <h6 class="m-b-20">Total Questions</h6>
+            <h6 class="m-b-20 mb-5">Total Questions</h6>
             <h2 class="text-right"><i class="fas fa-question-circle f-left"></i><span>{{total_question}}</span></h2>
             
           </div>
@@ -94,6 +102,8 @@
       </div>
     </div>
   </div>
+
+</body>
 
 
 <br><br><br><br><br><br><br><br><br><br>

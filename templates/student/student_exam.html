@@ -19,9 +19,38 @@
     .row {
       margin: 100px;
     }
+
+       .body-style{
+    background-color: #000;
+}
+
+ .btn-first {
+      text-align: center;
+      padding: 0.35rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    border-radius: 0.3rem;
+    background-color: rgb(87, 111, 232);
+    transition-property: color, rgb(87, 111, 232);
+    transition-duration: 250ms, 250ms;
+    transition-timing-function: ease, cubic-bezier(0.645, 0.045, 0.355, 1);
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    float:right;
+     margin-top: -30px;
+      margin-right: 40px;
+      width: 10%;
+    }
+    .logout_btn:hover {
+      background-color: #2f323a;
+      color: white;
+    }
   </style>
 </head>
 <br><br>
+<body class="body-style">
 <div class="container">
   <div class="panel panel-primary">
     <div class="panel-heading">
@@ -30,10 +59,8 @@
     <table class="table table-hover table-bordered" id="dev-table">
       <thead>
         <tr>
-
-          <th>Exam Name</th>
-          
-          <th>Action</th>
+          <th style="text-align: center;">Exam Name</th>          
+          <th style="text-align: center;">Action</th>
         </tr>
       </thead>
       {% for t in courses %}
@@ -48,5 +75,6 @@
   </div>
 </div>
 
+</body>
 <br><br><br><br><br><br>
 <!-- {% endblock content %} -->

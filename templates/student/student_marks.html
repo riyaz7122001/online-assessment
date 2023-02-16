@@ -12,41 +12,43 @@
       text-decoration: none;
     }
 
-    h6 {
+    /* h6 {
       text-align: center;
-    }
+    } */
 
-    .row {
+    /* .row {
       margin: 100px;
-    }
+    } */
+
+       .body-style{
+    background-color: black;
+}
+
   </style>
 </head>
 <br><br>
+<body class="body-style">
 <div class="container">
-  <div class="panel panel-primary">
+  <div class="panel">
     <div class="panel-heading">
-      <h6 class="panel-title">My Marks</h6>
+      <h6 class="panel-title" style="text-align: center;">My Marks</h6>
     </div>
     <table class="table table-hover table-bordered" id="dev-table">
       <thead>
         <tr>
-
-          <th>Course</th>
-          
-          <th>Action</th>
+          <th style="text-align: center;">Action</th>
+          <th style="text-align: center;">Course</th>          
         </tr>
       </thead>
       {% for t in courses %}
       <tr>
-
-        <td> {{t.course_name}}</td>
-        
+        <td> {{t.course_name}}</td>        
         <td><a class="btn btn-success btn-sm" style="border-radius:0px;" href="{% url 'check-marks' t.id  %}"><span class="glyphicon glyphicon-eye-open"></span> View Marks</a></td>
       </tr>
       {% endfor %}
     </table>
   </div>
 </div>
-
+</body>
 <br><br><br><br><br><br>
 <!-- {% endblock content %} -->
