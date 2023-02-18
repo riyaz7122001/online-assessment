@@ -22,7 +22,7 @@
       }
   
       .bg-c-blue {
-        background: #04868f;
+        background: #8aa1f7;
       }
   
       .bg-c-green {
@@ -30,7 +30,7 @@
       }
   
       .bg-c-yellow {
-        background: #F56565;
+        background: #9ef4d9;
       }
   
       .bg-c-pink {
@@ -68,11 +68,22 @@
     }
 
     .body-style{
-    background-color: black;
+    background-color: #060b27;
 }
 
 .col-md-4{
   border-radius: 10px;
+}
+
+    .text-right, .total {
+  color:black
+}
+    .body-style{
+    background-color: #060b27;
+}
+
+.card-effect:hover{
+  transform: translateY(-2.1rem);
 }
     </style>
   </head>
@@ -83,18 +94,18 @@
       
   
       <div class="col-md-4 col-xl-6 mt-5 rounded">
-        <div class="card bg-c-blue order-card">
+        <div class="card-effect card bg-c-blue order-card">
           <div class="card-block">
-            <h6 class="m-b-20 mb-5">Available Exams</h6>
+            <h6 class="total m-b-20 mb-5">Available Exams</h6>
            <h2 class="text-right"><i class="fas fa-book f-left"></i><span>{{total_course}}</span></h2>
           </div>
         </div>
       </div>
   
       <div class="col-md-4 col-xl-6 mt-5">
-        <div class="card bg-c-yellow order-card">
+        <div class="card-effect card bg-c-yellow order-card">
           <div class="card-block">
-            <h6 class="m-b-20 mb-5">Total Questions</h6>
+            <h6 class=" total m-b-20 mb-5">Total Questions</h6>
             <h2 class="text-right"><i class="fas fa-question-circle f-left"></i><span>{{total_question}}</span></h2>
             
           </div>

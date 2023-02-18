@@ -4,13 +4,10 @@
 
 <head>
   <meta charset="utf-8">
- 
-
   <style media="screen">
     a:link {
       text-decoration: none;
     }
-
     body {
       margin: 0;
       padding: 0;
@@ -115,7 +112,7 @@
     }
 
     label #sidebar_btn:hover {
-      color: #575757;
+      color: #6b6b6b;
     }
 
     #check:checked~.sidebar {
@@ -148,16 +145,36 @@
     #check {
       display: none;
     }
+
+     .btn-first {
+      text-align: center;
+      padding: 0.35rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    border-radius: 0.3rem;
+    background-color: rgb(87, 111, 232);
+    transition-property: color, rgb(87, 111, 232);
+    transition-duration: 250ms, 250ms;
+    transition-timing-function: ease, cubic-bezier(0.645, 0.045, 0.355, 1);
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    float:right;
+     margin-top: -30px;
+      margin-right: 40px;
+      width: 10%;
+    }
+    .logout_btn:hover {
+      background-color: #2f323a;
+      color: white;
+      font-weight: bold;
+    }
+
   </style>
-
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-
-
 </head>
-
 <body>
-
   <input type="checkbox" id="check">
   <!--header area start-->
   <header>
@@ -168,18 +185,16 @@
       <h3>Online Exam</h3>
     </div>
     <div class="right_area">
-      <a href="/logout" class="logout_btn">Logout</a>
+       <a href="/logout" class="btn-first" style="border-radius:5px;">Logout</a>
     </div>
   </header>
   <!--header area end-->
   <!--sidebar start-->
   <div class="sidebar">
     <center>
-
       <img src="{% static "image/teacher.png" %}" class="profile_image" alt="">
       <h4>{{request.user.first_name}}</h4>
       <h6 style="color: rgb(255, 255, 255);">( Teacher )</h6>
-
     </center>
 
     <a href="/teacher/teacher-dashboard"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
