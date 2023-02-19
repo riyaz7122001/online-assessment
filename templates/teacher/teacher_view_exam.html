@@ -1,3 +1,4 @@
+
 {% extends 'teacher/teacherbase.html' %}
 {% block content %}
 {%load static%}
@@ -19,13 +20,23 @@
     .row {
       margin: 100px;
     }
+
+    .body-style{
+      background-color: #060b27;
+    }
+    .title{
+      text-align: center;
+      color: white;
+    }
   </style>
 </head>
 <br><br>
+<body class="body-style">
+  
 <div class="container">
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <h6 class="panel-title">Available Courses</h6>
+      <h5 class="panel-title title">Available Courses</h5>
     </div>
     <table class="table table-hover table-bordered" id="dev-table">
       <thead>
@@ -44,12 +55,11 @@
         <td>{{t.question_number}}</td>
         <td>{{t.total_marks}}</td>
         
-        <td><a class="btn btn-danger btn-xs" style="border-radius: 0%;" href="{% url 'delete-exam' t.id  %}"><span class="glyphicon glyphicon-trash"></span></a></td>
+        <td><a class="btn btn-warning btn-xm" style="border-radius: 0%;" href="{% url 'delete-exam' t.id  %}"><span class="glyphicon glyphicon-trash"></span></a></td>
       </tr>
       {% endfor %}
     </table>
   </div>
 </div>
-
-<br><br><br><br><br><br>
-{% endblock content %}
+</body>
+<!-- {% endblock content %} -->

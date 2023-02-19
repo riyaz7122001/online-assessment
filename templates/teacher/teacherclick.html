@@ -22,6 +22,7 @@
     *{
       font-family: "Poppins",sans-serif;
        --nav-height: 0px;
+       color: black;;
     }
 
      .lead {
@@ -43,17 +44,18 @@
         border-width: 1px;
         border-color: transparent;
         border-radius: 0.3rem;
-        background-color: rgb(87, 111, 232);
+        background-color: black;
         transition-property: color, rgb(87, 111, 232);
         transition-duration: 250ms, 250ms;
         transition-timing-function: ease, cubic-bezier(0.645, 0.045, 0.355, 1);
-        color: rgb(0, 0, 0);
+        color: white;
+        padding: 10px;
         font-size: 1rem;
       }
       .btn-first:hover {
         border-color: rgb(255, 255, 255);
-        background-color: transparent;
-        color: rgb(255, 255, 255);
+        background-color: white;
+        color: rgb(0, 0, 0);
         text-decoration: none;
       }
 
@@ -66,7 +68,7 @@
       }
 
       .auth-div {
-        background-color: rgb(27, 27, 27);
+        background-color:#9ef4d9;
         text-align: center;
         padding: 2rem 2rem;
         border-radius: 5px;
@@ -109,12 +111,12 @@
 
   {% include "exam/navbar.html" %}
   <br>
-  <div class="auth-wrapper  animate__animated animate__bounce">
+  <div class="auth-wrapper">
     <div class="auth-div">
-    <h1 class="display-4" style ="color:white;">Hello Teacher,</h1>
+    <h1 class="display-4">Hello Teacher,</h1>
     <hr style ="background-color:#00BFA8; width:90%;text-align:center;">
-    <p class="lead" style ="color:white;">and Welcome to Online Assessment System</p>
-    <p class="lead"style ="color:white;">Select any of them to access into the system</p>
+    <p class="lead" style ="">and Welcome to Online Assessment System</p>
+    <p class="lead"style ="">Select any of them to access into the system</p>
     <p class="lead">
       <a class="btn-first"  href="teachersignup" role="button">Create Account</a>
       <a class="btn-first"  href="teacherlogin" role="button">Login Now</a>

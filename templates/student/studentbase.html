@@ -10,21 +10,19 @@
     a:link {
       text-decoration: none;
     }
-
     body {
       margin: 0;
       padding: 0;
       font-family: "Poppins", sans-serif;
     }
-
     header {
       position: fixed;
-      background: #22242A;
+      background: #e6e6e6;
       padding: 20px;
       width: 100%;
       z-index: 1;
+      color: black;
     }
-
     .left_area h3 {
       color: #fff;
       margin: 0px;
@@ -32,7 +30,6 @@
       font-size: 22px;
       font-weight: 900;
     }
-
     .left_area span {
       color: #19B3D3;
     }
@@ -55,14 +52,12 @@
       margin-right: 40px;
       width: 10%;
     }
-    .logout_btn:hover {
-      background-color: #2f323a;
+    .btn-first:hover {
+      background-color: #060b27;
       color: white;
-      font-weight: bold;
     }
-
     .sidebar {
-      background: #2f323a;
+      background: #8aa1f7;
       margin-top: 70px;
       padding-top: 30px;
       position: fixed;
@@ -71,21 +66,21 @@
       height: 100%;
       transition: 0.5s;
       transition-property: left;
-    }
+      border-right: 50px;
+      border-top-right-radius: 12%;
+      border-bottom-right-radius: 20%;
 
+    }
     .sidebar .profile_image {
       width: 100px;
       height: 100px;
       border-radius: 100px;
       margin-bottom: 10px;
     }
-
     .sidebar h4 {
       color: #ccc;
-      margin-top: 0;
-      
+      margin-top: 0;      
     }
-
     .sidebar a {
       color: #fff;
       display: block;
@@ -97,16 +92,13 @@
       transition: 0.5s;
 
     }
-
     .sidebar a:hover {
-      background: #969696;
+      background: #fff;
       color: white;
     }
-
     .sidebar i {
       padding-right: 10px;
     }
-
     label #sidebar_btn {
       z-index: 1;
       color: #fff;
@@ -118,25 +110,20 @@
       transition: 0.5s;
       transition-property: color;
     }
-
     label #sidebar_btn:hover {
       color: #6b6b6b;
     }
-
     #check:checked~.sidebar {
       left: -190px;
     }
-
     #check:checked~.sidebar a span {
       display: none;
     }
-
     #check:checked~.sidebar a {
       font-size: 20px;
       margin-left: 170px;
       width: 80px;
     }
-
     .content {
       margin-left: 250px;
       background: url(background.png) no-repeat;
@@ -150,46 +137,39 @@
     }
     #check {
       display: none;
-    }
-
-   
+    }   
   </style>
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 
-
 </head>
-
 <body>
-
   <input type="checkbox" id="check">
   <!--header area start-->
-  <header>
+<header>
     <label for="check">
-      <i style="left: 200px;margin-top: 17px;"class="fas fa-bars" id="sidebar_btn"></i>
+      <i style="left: 200px;margin-top: 17px; color: black;"class="fas fa-bars" id="sidebar_btn"></i>
     </label>
     <div class="left_area">
-      <h3>Online Exam</h3>
+      <h3 style="color: black;">Online Exam</h3>
     </div>
-    <div class="right_area ">
-      <a href="/logout" class="btn-first" style="border-radius:5px;">Logout</a>
+    <div class="right_area">
+       <a href="/logout" class="btn-first" style="border-radius:5px;">Logout</a>
     </div>
   </header>
   <!--header area end-->
   <!--sidebar start-->
   <div class="sidebar">
     <center>
-
       <img src="{% static "image/student.png" %}" class="profile_image" alt="">
-      <h4>{{request.user.first_name}}</h4>
-      <h6 style="color: rgb(255, 255, 255);">( Student )</h6>
-
+      <h4 style="color: rgb(0, 0, 0);>{{request.user.first_name}}</h4>
+      <h6 style="color: rgb(0, 0, 0);">( Student )</h6>
     </center>
 
-    <a href="/student/student-dashboard"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
-    <a href="/student/student-exam"><i class="fas fa-book"></i><span>Examination</span></a>
-    <a href="/student/student-marks"><i class="fas fa-sort-numeric-up"></i><span>My Marks</span></a>
+    <a href="/student/student-dashboard" style="color: black; "><i class="fas fa-tachometer-alt" "></i><span>Dashboard</span></a>
+    <a href="/student/student-exam" style="color: black;"><i class="fas fa-book"></i><span>Examination</span></a>
+    <a href="/student/student-marks"  style="color: black;"><i class="fas fa-sort-numeric-up"></i><span >My Marks</span></a>
   </div>
   <!--sidebar end-->
 

@@ -10,7 +10,12 @@
     a:link {
       text-decoration: none;
     }
-
+ *{
+      color: black;
+    }
+    a:link {
+      text-decoration: none;
+    }
     body {
       margin: 0;
       padding: 0;
@@ -19,14 +24,16 @@
 
     header {
       position: fixed;
-      background: #22242A;
+      background: #e6e6e6;
       padding: 20px;
       width: 100%;
-      z-index: 1;
+      z-index: 5;
+      border: 2px solid black;
+      color: #000000;
     }
 
     .left_area h3 {
-      color: #fff;
+      color: black;
       margin: 0px;
       text-transform: uppercase;
       font-size: 22px;
@@ -36,30 +43,8 @@
     .left_area span {
       color: #19B3D3;
     }
-
-
-
-    .logout_btn {
-      padding: 5px;
-      background: #ef5350;
-      text-decoration: none;
-      float: right;
-      margin-top: -30px;
-      margin-right: 40px;
-      border-radius: 2px;
-      font-size: 15px;
-      font-weight: 600;
-      color: #fff;
-      transition: 0.5s;
-
-    }
-
-    .logout_btn:hover {
-      background:#ca4745;
-    }
-
     .sidebar {
-      background: #2f323a;
+      background: #8aa1f7;
       margin-top: 70px;
       padding-top: 30px;
       position: fixed;
@@ -68,23 +53,27 @@
       height: 100%;
       transition: 0.5s;
       transition-property: left;
+      border-right: 50px;
+      border-top-right-radius: 12%;
+      border-bottom-right-radius: 20%;
     }
 
     .sidebar .profile_image {
       width: 100px;
       height: 100px;
+      margin-top: 5%;
       border-radius: 100px;
       margin-bottom: 10px;
     }
 
     .sidebar h4 {
-      color: #ccc;
+      color: black;
       margin-top: 0;
-      margin-bottom: 20px;
+      
     }
 
     .sidebar a {
-      color: #fff;
+      color: black;
       display: block;
       width: 100%;
       line-height: 60px;
@@ -92,12 +81,12 @@
       padding-left: 40px;
       box-sizing: border-box;
       transition: 0.5s;
-
     }
 
     .sidebar a:hover {
-      background:  #969696;
+      background:  white;
       color:white;
+      text-decoration: none;
     }
 
     .sidebar i {
@@ -106,7 +95,7 @@
 
     label #sidebar_btn {
       z-index: 1;
-      color: #fff;
+      color: #000000;
       position: fixed;
       cursor: pointer;
       left: 300px;
@@ -117,7 +106,7 @@
     }
 
     label #sidebar_btn:hover {
-      color: #5f5f5f;
+      color: grey;
     }
 
     #check:checked~.sidebar {
@@ -150,6 +139,43 @@
     #check {
       display: none;
     }
+
+     .btn-first {
+      text-align: center;
+      padding: 0.4rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    border-radius: 0.3rem;
+    background-color: rgb(87, 111, 232);
+    transition-property: color, rgb(87, 111, 232);
+    transition-duration: 250ms, 250ms;
+    transition-timing-function: ease, cubic-bezier(0.645, 0.045, 0.355, 1);
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    float:right;
+     margin-top: -25px;
+      margin-right: 40px;
+      width: 10%;
+    }
+        .btn-first:hover {
+        border-color: none;
+        background-color: #060b27;
+        color: white;
+        text-decoration: none;
+      }
+
+          .text-right, .total {
+  color:black
+}
+    .body-style{
+    background-color: #060b27;
+}
+
+.card-effect:hover{
+  transform: translateY(-2.1rem);
+}
   </style>
 
 
@@ -170,7 +196,7 @@
       <h3>Online Exam</h3>
     </div>
     <div class="right_area">
-      <a href="/logout" class="logout_btn" style="border-radius:5px;"> Logout</a>
+      <a href="/logout" class="btn-first  " style="border-radius:5px;"> Logout</a>
     </div>
   </header>
   <!--header area end-->
@@ -204,7 +230,7 @@
 
 
     <br><br><br>
-    {% include "exam/footer.html" %}
+    <!-- {% include "exam/footer.html" %} -->
   </div>
   <!--content end-->
 </body>

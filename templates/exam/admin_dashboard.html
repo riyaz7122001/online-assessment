@@ -22,22 +22,23 @@
       }
   
       .bg-c-blue {
-        background: #04868f;
+        background: #e07db9;
       }
   
       .bg-c-green {
-        background:#4C51BF;
+        background:#9ef4d9;
       }
   
       .bg-c-yellow {
-        background: #F56565;
+        background: #8aa1f7;
       }
   
       .bg-c-pink {
-        background:#3186ca;
+        background:#F56565;
       }
   
   
+
       .card {
         
         -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
@@ -46,6 +47,7 @@
         -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
       }
+  
   
       .card .card-block {
         padding: 25px;
@@ -66,17 +68,25 @@
       left: 0px;
       right: 0px;
     }
+    .body-style{
+         background-color: #060b27;
+    }
+        .text-right, .total {
+  color:black
+}
     </style>
   </head>
 <br><br>
 
+<body  class="body-style">
+  
   <div class="container">
     <div class="row">
-      <div class="col-md-4 col-xl-3">
+      <div class="col-md-4 col-xl-6 mt-5 rounded">
         <a href="admin-view-student" style="text-decoration: none;color:white;">
-        <div class="card bg-c-pink order-card" style="border-radius:20px;">
+        <div class="card-effect card bg-c-pink order-card" >
           <div class="card-block">
-            <h6 class="m-b-20">Registered Students </h6>
+            <h5 class="total m-b-20 mb-5">Registered Students </h5>
             <h2 class="text-right"><i class="fas fa-user-graduate f-left"></i><span>{{total_student}}</span></h2>
           </div>
         </div>
@@ -84,33 +94,33 @@
       </div>
       
   
-      <div class="col-md-4 col-xl-3">
+      <div class="col-md-4 col-xl-6 mt-5 rounded">
         <a href="admin-view-teacher" style="text-decoration: none;color:white;">
-        <div class="card bg-c-green order-card" style="border-radius:20px;">
+        <div class="card-effect card bg-c-green order-card" >
           <div class="card-block">
-            <h6 class="m-b-20">Total Teachers </h6>
+            <h5 class="total m-b-20 mb-5">Total Teachers </h5>
             <h2 class="text-right"><i class="fas fa-chalkboard-teacher f-left"></i><span>{{total_teacher}}</span></h2>
           </div>
         </div>
       </a>
       </div>
   
-      <div class="col-md-4 col-xl-3">
+      <div class="col-md-4 col-xl-6 mt-5 rounded">
         <a href="admin-view-course" style="text-decoration: none;color:white;">
-        <div class="card bg-c-blue order-card" style="border-radius:20px;">
+        <div class="card-effect card bg-c-blue order-card" >
           <div class="card-block">
-            <h6 class="m-b-20">Total Courses</h6>
+            <h5 class="total m-b-20 mb-5">Total Courses</h5>
            <h2 class="text-right"><i class="fas fa-book f-left"></i><span>{{total_course}}</span></h2> 
           </div>
         </div>
       </a>
       </div>
   
-      <div class="col-md-4 col-xl-3">
+      <div class="col-md-4 col-xl-6 mt-5 rounded">
         <a href="admin-view-question" style="text-decoration: none;color:white;">
-        <div class="card bg-c-yellow order-card" style="border-radius:20px;">
+        <div class="card-effect card bg-c-yellow order-card">
           <div class="card-block">
-            <h6 class="m-b-20">Available Questions</h6>
+            <h5 class="total m-b-20 mb-5">Available Questions</h5>
             <h2 class="text-right"><i class="fas fa-question-circle f-left"></i><span>{{total_question}}</span></h2>
           </div>
         </div>
@@ -126,5 +136,6 @@
 
 <script src="http://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
 
+</body>
 
-{% endblock content %}
+<!-- {% endblock content %} -->

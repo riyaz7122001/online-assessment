@@ -10,69 +10,130 @@
     <style>
       *{
           font-family: "Poppins",sans-serif;
+          color: black;
       }
         form{
            margin: 50px;           
         }
+.body-style{
+  background-color: #060b27;
+}
+
+.auth-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+
+}
+
+.auth-div {
+  background-color: #9ef4d9;
+  text-align: center;
+  padding: 3rem 5rem;
+  border-radius: 10px;
+  width: 40rem;
+  height: 32rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+ .btn-first {
+   width: 80%;
+    margin-left: 8%;
+    text-align: center;
+    padding: 0.35rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    border-radius: 0.3rem;
+    background-color:black ;
+    transition-property: color, rgb(87, 111, 232);
+    transition-duration: 250ms, 250ms;
+    transition-timing-function: ease, cubic-bezier(0.645, 0.045, 0.355, 1);
+    color: white;
+    font-size: 1rem;
+    }
+    .btn-first:hover{
+      border-color: none;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    }
+
+    input[type="text"],input[type="password"] {
+      width: 100%;
+    border-style: solid;
+    border-width: 2px;
+    border-color:#121212;
+    border-radius: 5px;     
+}
 
     </style>
   </head>
-  <body>
+  <body class="body-style">
     {% include "exam/navbar.html" %}
-<br><br><br>
-<div class="container">
-  <h3 style="text-align: center;">Student Signup Form</h3>
-<form method="POST" autocomplete="off" enctype="multipart/form-data">
-    {% csrf_token %}
+    <br><br><br>
+    <div class="auth-wrapper">
+      <div class="auth-div">
+        <h2 style="text-align: center; margin-bottom: 10px;">Student Signup Form</h2>
 
-    <div class="form-row">
+  <form method="POST" autocomplete="off" enctype="multipart/form-data">
+    {% csrf_token %}
+    
+        <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="first_name">First Name</label>
+          <label for="first_name" style="float: left;">First Name</label>
           {% render_field userForm.first_name|attr:'required:true'  class="form-control" placeholder="First Name" %}
         </div>
         <div class="form-group col-md-6">
-          <label for="last_name">Last Name</label>
+          <label for="last_name" style="float: left;">Last Name</label>
           {% render_field userForm.last_name|attr:'required:true'  class="form-control" placeholder="Last Name" %}
         </div>
       </div>
 
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="mobile">Contact</label>
+          <label for="mobile" style="float: left;">Contact</label>
           {% render_field studentForm.mobile|attr:'required:true'  class="form-control" placeholder="Contact Number" %}
         </div>
         <div class="form-group col-md-6">
-          <label for="address">Address</label>
+          <label for="address" style="float: left;">Address</label>
           {% render_field studentForm.address|attr:'required:true'  class="form-control" placeholder="Address" %}
         </div>
       </div>
 
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="username">Username</label>
+          <label for="username" style="float: left;">Username</label>
           {% render_field userForm.username|attr:'required:true'  class="form-control" placeholder="username" %}
         </div>
         <div class="form-group col-md-6">
-          <label for="inputPassword4">Password</label>
+          <label for="inputPassword4" style="float: left;">Password</label>
           {% render_field userForm.password|attr:'required:true'  class="form-control" placeholder="password" %}
         </div>
       </div>
-
+<!-- 
       <div class="form-row">
         <div class="form-group col-md-12">
           <label for="profile_pic">Profile Picture</label>
           {% render_field studentForm.profile_pic|attr:'required:true' class="form-control" placeholder="" %}
-        </div>
+        </div> -->
         
+        <button type="submit" class="btn-first" style="margin-top: 2%;">Sign Up</button>
       </div>
 
-
-    <button type="submit" class="btn btn-success" style="border-radius: 5px;">Sign Up</button>
+      </div>
+    </div> 
   </form>
 </div>
-
-
-<br><br>
+</div>
 <!-- {% include "exam/footer.html" %} -->
   </body>
 </html>

@@ -22,20 +22,20 @@
 <body class="body-style">
 <div class="container">
   <div class="panel">
-    <div class="panel-heading">
-      <h6 class="panel-title" style="text-align: center;">My Marks</h6>
+    <div class="panel-heading" style="background-color: #428bca;">
+      <h6 class="panel-title" style="text-align: center;color: white; ">My Marks</h6>
     </div>
     <table class="table table-hover table-bordered" id="dev-table">
       <thead>
         <tr>
-          <th style="text-align: center;">Action</th>
-          <th style="text-align: center;">Course</th>          
+          <th style="text-align: center; width: 50%;">Action</th>
+          <th style="text-align: center; width: 50%;">Course</th>          
         </tr>
       </thead>
       {% for t in courses %}
       <tr>
         <td> {{t.course_name}}</td>        
-        <td><a class="btn btn-success btn-sm" style="border-radius:0px;" href="{% url 'check-marks' t.id  %}"><span class="glyphicon glyphicon-eye-open"></span> View Marks</a></td>
+        <td><a class="btn btn-success btn-m" style="border-radius:0px;" href="{% url 'check-marks' t.id  %}"><span style="margin-right: 2px;" class="glyphicon glyphicon-eye-open"></span> View Marks</a></td>
       </tr>
       {% endfor %}
     </table>

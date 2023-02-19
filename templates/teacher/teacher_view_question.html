@@ -19,9 +19,19 @@
     .row {
       margin: 100px;
     }
+    
+    .body-style{
+      background-color: #060b27;
+    }
+    .title{
+      text-align: center;
+      color: white;
+    }
   </style>
 </head>
 <br><br>
+<body class="body-style">
+  
 <div class="container">
   <div class="panel panel-primary">
     <div class="panel-heading">
@@ -43,13 +53,12 @@
         <td> {{c.course_name}}</td>
         <td>{{c.question_number}}</td>
         <td>{{c.total_marks}}</td>
-        <td><a class="btn btn-primary btn-sm" style="border-radius: 0%;" href="{% url 'see-question' c.id  %}"><span class="glyphicon glyphicon-eye-open"></span> View Question</a></td>
+        <td><a class="btn btn-success btn-ms" style="padding-left: 12px; align-items: center; justify-content: center;" href="{% url 'see-question' c.id  %}"><span style="margin-right:3px" class="glyphicon glyphicon-eye-open"></span> View Question</a></td>
         
       </tr>
       {% endfor %}
     </table>
   </div>
 </div>
-
-<br><br><br><br><br><br>
-{% endblock content %}
+</body>
+<!-- {% endblock content %} -->

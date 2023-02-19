@@ -14,25 +14,83 @@
   a:link {
         text-decoration: none;
       }
-    
+    .body-style{
+      background-color: #060b27;
+    }
+    .auth-wrapper {
+      margin-top: -68px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-div {
+  background-color: #e07db9;
+  text-align: center;
+  padding: 3rem 3rem;
+  border-radius: 10px;
+  width: 80rem;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+}
+
+label{
+  float: left;
+}
+
+ .btn-first1 {
+  width: 100%;;
+    text-align: center;
+    padding: 0.65rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    border-radius: 0.3rem;
+    background-color:black ;
+    transition-property: color, rgb(87, 111, 232);
+    transition-duration: 250ms, 250ms;
+    transition-timing-function: ease, cubic-bezier(0.645, 0.045, 0.355, 1);
+    color: white;
+    font-size: 1.5rem;
+    }
+    .btn-first1:hover{
+      border-color: none;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    }
   </style>
 </head>
-<h2 style="text-align:center; ">Add Course Info</h2>
-<form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;">
+<body class="body-style">
+  <div class="auth-wrapper">
+    <div class="auth-div">
+ <h1 style="text-align:center;;">Add Course Info</h1>
+<form method="POST" autocomplete="off">
     {%csrf_token%}
     <div class="form-group">
-      <label for="course_name">Course Name</label>
+      <label for="course_name left-text">Course Name</label>
       {% render_field courseForm.course_name class="form-control" placeholder="Example: Databases" %}
 
-      <label for="question_number">Total Question</label>
+      <label for="question_number left-text">Total Question</label>
       {% render_field courseForm.question_number class="form-control" placeholder="Example: 10" %}
 
-      <label for="total_marks">Total Marks</label>
-      {% render_field courseForm.total_marks class="form-control" placeholder="Example: 100" %}
-    </div>
+      <label for="total_marks left-text">Total Marks</label>
+      {% render_field courseForm.total_marks class="form-control" placeholder="Example: 100" %}   </div>
     
 
-    <button type="submit" class="btn btn-success" style="border-radius: 5px;">Submit Info</button>
+    <button type="submit" class="btn-first1" style="border-radius: 5px;">Submit Info</button>
   </form>
-<br><br><br>
-{% endblock content %}
+    </div>
+  </div>
+ 
+</body>
+<!-- {% endblock content %} -->

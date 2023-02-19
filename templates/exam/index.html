@@ -15,6 +15,7 @@
     <style>
       * { --nav-height: 0px;
         font-family: "Poppins",sans-serif;
+        color: black;
       }
       /* .display-4,
       .lead {
@@ -40,17 +41,17 @@
         border-width: 1px;
         border-color: transparent;
         border-radius: 0.3rem;
-        background-color: rgb(87, 111, 232);
+        background-color: black;
         transition-property: color, rgb(87, 111, 232);
         transition-duration: 250ms, 250ms;
         transition-timing-function: ease, cubic-bezier(0.645, 0.045, 0.355, 1);
-        color: rgb(0, 0, 0);
+        color: white;
         font-size: 1rem;
       }
       .btn-first:hover {
-        border-color: rgb(255, 255, 255);
-        background-color: transparent;
-        color: rgb(255, 255, 255);
+        border-color: none;
+        background-color: white;
+        color: black;
         text-decoration: none;
       }
 
@@ -63,7 +64,7 @@
       }
 
       .auth-div {
-        background-color: rgb(27, 27, 27);
+        background-color: #9ef4d9;
         text-align: center;
         padding: 2rem 2rem;
         border-radius: 5px;
@@ -97,12 +98,13 @@
       a:hover{
         border-color: rgb(255, 255, 255);
         background-color: transparent;
-        color: rgb(255, 255, 255);
+        color: black;
         text-decoration: none;
       }
 /* .animate__animated.animate__bounce {
   --animate-duration: 2.2s;
 } */
+
   </style>
   </head>
 
@@ -110,7 +112,7 @@
     {% include "exam/navbar.html" %}
     <br />
     <section
-      class="auth-wrapper animate__animated animate__bounce"
+      class="auth-wrapper"
 
     >
     <div class="auth-div">
@@ -123,7 +125,7 @@
         <p><strong> Start Your Journey Here:</strong></p>
         
         <!-- <button class="btn-first"><a href="/student/studentsignup">Signup</a></button> -->
-        <a class="btn-first" href="/student/studentsignup" style="text-align:center;align-items:center;height:9%;width:15rem; border-radius: 1.8rem; margin-top: 1rem"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;&nbsp;Signup as Student</a>
+        <a class="btn-first" href="/student/studentsignup" style="text-align:center;align-items:center;height:9%;width:12rem; border-radius: 1rem; margin-top: 1rem">Signup as Student</a>
         <!-- <a
           href="/student/studentsignup"   
         
