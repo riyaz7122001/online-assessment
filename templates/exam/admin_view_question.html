@@ -19,13 +19,23 @@
     .row {
       margin: 100px;
     }
+        .container{
+  margin-top: 5%;
+}
+        .text-right, .total {
+  color:black
+}
+    .body-style{
+    background-color: #060b27;
+}
   </style>
 </head>
-<br><br>
+<body class="body-style">
+  
 <div class="container">
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <h6 class="panel-title">Available Question Sets</h6>
+      <h6 class="panel-title" style="color: white;">Available Question Sets</h6>
     </div>
     <table class="table table-hover table-bordered" id="dev-table">
       <thead>
@@ -43,13 +53,14 @@
         <td> {{c.course_name}}</td>
         <td>{{c.question_number}}</td>
         <td>{{c.total_marks}}</td>
-        <td><a class="btn btn-primary btn-xs" style="border-radius: 0%;" href="{% url 'view-question' c.id  %}"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+        <td><a class="btn btn-success btn-xs" style="border-radius: 0%; width: 40%;" href="{% url 'view-question' c.id  %}"><span class="glyphicon glyphicon-eye-open"></span></a></td>
         
       </tr>
       {% endfor %}
     </table>
   </div>
 </div>
+</body>
 
 <br><br><br><br><br><br>
 {% endblock content %}

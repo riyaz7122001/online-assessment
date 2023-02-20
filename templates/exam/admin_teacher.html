@@ -22,15 +22,15 @@
       }
   
       .bg-c-blue {
-        background: #04868f;
+        background: #9ef4d9;
       }
   
       .bg-c-green {
-        background: #607d8b;
+        background: #F56565;
       }
   
       .bg-c-yellow {
-        background: #F56565;
+        background: #8aa1f7;
       }
   
       .bg-c-pink {
@@ -66,39 +66,50 @@
       left: 0px;
       right: 0px;
     }
+        .text-right, .total {
+  color:black
+}
+    .body-style{
+    background-color: #060b27;
+}
+
+.card-effect:hover{
+  transform: translateY(-2.1rem);
+}
     </style>
   </head>
 <br><br>
+<body class="body-style">
 
   <div class="container">
     <div class="row">
-      <div class="col-md-4 col-xl-4">
+      <div class="col-md-4 col-xl-6 mt-5 rounded">
         <a href="admin-view-teacher" style="text-decoration: none;color:white;">
-        <div class="card bg-c-blue order-card">
+        <div class="card-effect card bg-c-blue order-card">
           <div class="card-block">
-            <h6 class="m-b-20"> Total Approved Teacher </h6>
+            <h6 class="m-b-20 mb-5"> Total Approved Teacher </h6>
             <h2 class="text-right"><i class="fas fa-chalkboard-teacher f-left"></i><span>{{total_teacher}}</span></h2>
           </div>
         </div>
       </a>
       </div>
   
-      <div class="col-md-4 col-xl-4">
+      <div class="col-md-4 col-xl-6 mt-5 rounded">
         <a href="admin-view-pending-teacher" style="text-decoration: none;color:white;">
-        <div class="card bg-c-yellow order-card">
+        <div class="card-effect card bg-c-yellow order-card">
           <div class="card-block">
-            <h6 class="m-b-20">Total Pending Teacher </h6>
+            <h6 class="m-b-20 mb-5">Total Pending Teacher </h6>
             <h2 class="text-right"><i class="fas fa-sync-alt f-left"></i><span>{{pending_teacher}}</span></h2>
           </div>
         </div>
       </a>
       </div>
   
-      <div class="col-md-4 col-xl-4">
+      <div class="col-md-4 col-xl-6 mt-5 rounded">
         <a href="admin-view-teacher-salary" style="text-decoration: none;color:white;">
-        <div class="card bg-c-green order-card">
+        <div class="card-effect card bg-c-green order-card">
           <div class="card-block">
-            <h6 class="m-b-20">Total Teacher Salary</h6>
+            <h6 class="m-b-20 mb-5">Total Teacher Salary</h6>
             <h2 class="text-right"><i class="fas fa-dollar-sign f-left"></i><span>${{salary}}</span></h2>
           </div>
         </div>
@@ -113,6 +124,7 @@
 <br><br><br><br><br><br><br><br><br><br>
 
 <script src="http://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+</body>
 
 
 {% endblock content %}

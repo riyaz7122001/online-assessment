@@ -19,13 +19,21 @@
     .row {
       margin: 100px;
     }
+          .body-style{
+         background-color: #060b27;
+    }
+        .text-right, .total {
+  color:black
+}
   </style>
 </head>
 <br><br>
+<body class="body-style">
+  
 <div class="container">
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <h6 class="panel-title">Registered Students</h6>
+      <h6 class="panel-title" style="color: white;">Registered Students</h6>
     </div>
     <table class="table table-hover table-bordered" id="dev-table">
       <thead>
@@ -46,7 +54,7 @@
         <td> <img src="{% static t.profile_pic.url %}" alt="Profile Pic" height="40px" width="40px" /></td>
         
         
-        <td><a class="btn btn-primary btn-sm" style="border-radius: 0%;" href="{% url 'admin-view-marks' t.id  %}"><span class="glyphicon glyphicon-eye-open"></span> View Marks</a></td>
+        <td><a class="btn btn-primary btn-m" style="border-radius: 0%;" href="{% url 'admin-view-marks' t.id  %}"><span class="glyphicon glyphicon-eye-open"></span> View Marks</a></td>
         
       </tr>
       {% endfor %}
@@ -54,5 +62,6 @@
   </div>
 </div>
 
+</body>
 <br><br><br><br><br><br>
 {% endblock content %}

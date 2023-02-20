@@ -19,13 +19,26 @@
     .row {
       margin: 100px;
     }
+            .text-right, .total {
+  color:black
+}
+    .body-style{
+    background-color: #060b27;
+}
+
+.card-effect:hover{
+  transform: translateY(-2.1rem);
+}
   </style>
 </head>
 <br><br>
+
+<body class="body-style">
+  
 <div class="container">
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <h6 class="panel-title">Pending Teachers</h6>
+      <h6 class="panel-title" style="color: white;">Pending Teachers</h6>
     </div>
     <table class="table table-hover table-bordered" id="dev-table">
       <thead>
@@ -55,5 +68,6 @@
   </div>
 </div>
 
+</body>
 <br><br><br><br><br><br>
 {% endblock content %}

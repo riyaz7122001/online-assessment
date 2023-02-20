@@ -19,13 +19,21 @@
     .row {
       margin: 100px;
     }
+      .body-style{
+         background-color: #060b27;
+    }
+        .text-right, .total {
+  color:black
+}
   </style>
 </head>
 <br><br>
+<body class="body-style">
+  
 <div class="container">
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <h6 class="panel-title">Exams</h6>
+      <h6 class="panel-title" style="color: white;">Exams</h6>
     </div>
     <table class="table table-hover table-bordered" id="dev-table">
       <thead>
@@ -42,12 +50,13 @@
         <td> {{t.course_name}}</td>
         
         
-        <td><a class="btn btn-danger btn-sm" style="border-radius: 0%;" href="{% url 'admin-check-marks' t.id  %}"><span class="glyphicon glyphicon-eye-open"></span> View Marks</a></td>
+        <td><a class="btn btn-danger btn-sm" style="border-radius: 0%; width: 20%;" href="{% url 'admin-check-marks' t.id  %}"><span class="glyphicon glyphicon-eye-open"></span> View Marks</a></td>
       </tr>
       {% endfor %}
     </table>
   </div>
 </div>
 
+</body>
 <br><br><br><br><br><br>
 {% endblock content %}
