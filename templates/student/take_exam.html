@@ -6,12 +6,44 @@
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<style>
+        .body-style{
+    background-color: #060b27;
+}
+.box{
+    background-color: #e07db9;
+}
+ .btn-first1 {
+   width: 100%;
+    text-align: center;
+    padding: 0.9rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    border-radius: 0.3rem;
+    background-color:black ;
+    transition-property: color, rgb(87, 111, 232);
+    transition-duration: 250ms, 250ms;
+    transition-timing-function: ease, cubic-bezier(0.645, 0.045, 0.355, 1);
+    color: white;
+    font-size: 1rem;
+    }
+    .btn-first1:hover{
+      border-color: none;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    }
 
+</style>
 
 </head>
 <br><br>
-<div class="container my-4">
-    <div class="jumbotron">
+<body class="body-style">
+    
+<div class="container my-4 ">
+    <div class="jumbotron box  ">
 
         <div class="row">
 
@@ -33,7 +65,7 @@
                     <p class="card-text">
                         </p><ul style="list-style:decimal;">
                             <li>All questions are MCQ (multiple choice question)</li>
-                            <li><span class="text-danger">Only one choice is correct among the given.</span></li>
+                            <li><span class="text-secondary">Only one choice is correct among the given.</span></li>
                             <li>Every question carry different marks.</li>
                             <li>Try to answer ASAP.</li>
                             <li>If you PRESS refresh or go back to the previous page, there will be a new question for you and the question you were on will be counted as number of attempts.</li>
@@ -41,7 +73,7 @@
                             <li>You will be able to view marks immediately once after you submit the answer.</li>
                         </ul>
                     <p></p>
-                    <a href="{% url 'start-exam' course.id  %}" class="btn btn-success" style="border-radius:0px;">Enter Examination</a>
+                    <a href="{% url 'start-exam' course.id  %}" class="btn-first1" style="border-radius:0px; width: 100%; font-size: 15px;">Enter Examination</a>
                 </div>  
                 <div class="card-footer">Best Of Luck, Students!</div>  
             </div>  
@@ -50,5 +82,5 @@
     </div>
 </div>
 
-<br><br><br><br><br><br>
-{% endblock content %}
+</body>
+<!-- {% endblock content %} -->

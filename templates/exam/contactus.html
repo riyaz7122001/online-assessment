@@ -5,18 +5,72 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+<style>
+    .body-style{
+    background-color: #060b27;
+}
+.auth-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
 
+}
+
+.auth-div {
+  background-color: #9ef4d9;
+  text-align: center;
+  padding: 3rem 5rem;
+  border-radius: 10px;
+  width: 40rem;
+  height: 32rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+ .btn-first {
+   width: 80%;
+    margin-left: 8%;
+    text-align: center;
+    padding: 0.35rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    border-radius: 0.3rem;
+    background-color:black ;
+    transition-property: color, rgb(87, 111, 232);
+    transition-duration: 250ms, 250ms;
+    transition-timing-function: ease, cubic-bezier(0.645, 0.045, 0.355, 1);
+    color: white;
+    font-size: 1rem;
+    }
+    .btn-first:hover{
+      border-color: none;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    }
+
+</style>
 
 
 </head>
 
-<body>
+<body class="body-style">
 
   {% include "exam/navbar.html" %}
   <br><br>
+<div class="auth-wrapper">
+  <div class="auth-div">
 
   <center>
-    <h3 class='alert alert-success'>Please fillup the form in order to contact us</h3>
+    <h3 class='alert alert-warning'>Please fillup the form in order to contact us</h3>
 
     <form method="POST" autocomplete="off">
       <!-- Very Important csrf Token -->
@@ -26,12 +80,14 @@
         <h3>{{ form.as_p }}</h3>
         </p>
         <br>
-        <input type="submit" value="Submit" class='btn btn-primary' style="border-radius: 5px;">
+        <input type="submit" value="Submit" class='btn-first' style="border-radius: 5px;">
       </div>
     </form>
   </center>
 
-  {% include "exam/footer.html" %}
+  </div>
+</div>
+  <!-- {% include "exam/footer.html" %} -->
 </body>
 
 </html>

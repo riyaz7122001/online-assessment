@@ -7,17 +7,53 @@
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
+<style>
+      a:link {
+        text-decoration: none;
+      }
+    .body-style{
+    background-color: #060b27;
+}
+.box{
+  background-color: #e07db9;
+  margin: 10%;
+}
+ .btn-first1 {
+   width: 20%;
+    margin-left: 8%;
+    text-align: center;
+    padding: 0.6rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    border-radius: 0.3rem;
+    background-color:black ;
+    transition-property: color, rgb(87, 111, 232);
+    transition-duration: 250ms, 250ms;
+    transition-timing-function: ease, cubic-bezier(0.645, 0.045, 0.355, 1);
+    color: white;
+    font-size: 1rem;
+    margin-left:40%;
+    }
+    .btn-first1:hover{
+      border-color: none;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    }
+</style>
 
 </head>
 
-
-<div class="jumbotron my-4">
-
+<body class="body-style">
+  
+<div class="jumbotron my-4 box">
   <form class="form" autocomplete="off" onsubmit="return saveAns()"  action="/student/calculate-marks" method="POST">
     {% csrf_token %}
     <h2 style="text-align: center;">Course: {{course.course_name}}</h2>
     {% for q in questions%}
-    <h3 class="text-danger">{{ forloop.counter }}. {{q.question}}</h3><h4 style="text-align: right;">[{{q.marks}} Marks]</h4>
+    <h3 class="">{{ forloop.counter }}. {{q.question}}</h3><h4 style="text-align: right;">[{{q.marks}} Marks]</h4>
     
         <input type="hidden" name="csrfmiddlewaretoken" value="C24rUotmdHawVQJL3KrqiWxvti8UffOFYUc8TRbZtLt36AVLdP3jbkzUVe3beRAa">
         
@@ -54,7 +90,7 @@
           </div>
 
         {% endfor %}
-        <input class="btn btn-success btn-lg" style="border-radius: 0%;"  type="submit" value="Submit Answers">  
+        <input class="btn-first1 btn-lg" style="border-radius: 0%;"  type="submit" value="Submit Answers">  
     </form>
   </div>
 
@@ -81,5 +117,7 @@
 
 </script> 
 
+</body>
+
 <br><br><br><br><br><br>
-{% endblock content %}
+<!-- {% endblock content %} -->
